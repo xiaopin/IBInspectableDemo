@@ -38,6 +38,8 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorHex" value="0xFF6633"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hexBgColor" value="0xFF6633"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aiz-u6-TWA" customClass="PCCustomButton">
@@ -62,13 +64,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ug-fL-EBQ" customClass="PCCustomView">
+                                <rect key="frame" x="46" y="198" width="283" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UXe-MU-akQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hexBorderColor" value="0xFF6633"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hexBgColor" value="#FF21ED"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9Ug-fL-EBQ" firstAttribute="leading" secondItem="Aiz-u6-TWA" secondAttribute="leading" id="3ah-tf-UUD"/>
                             <constraint firstItem="6ta-GV-CP1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="5Lo-lj-BLZ"/>
                             <constraint firstItem="Aiz-u6-TWA" firstAttribute="top" secondItem="6ta-GV-CP1" secondAttribute="bottom" constant="30" id="81n-fN-Eo3"/>
                             <constraint firstItem="Aiz-u6-TWA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="FaW-9H-uxP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6ta-GV-CP1" secondAttribute="trailing" constant="30" id="OR3-rY-qhS"/>
+                            <constraint firstItem="9Ug-fL-EBQ" firstAttribute="trailing" secondItem="Aiz-u6-TWA" secondAttribute="trailing" id="QHl-DS-qXs"/>
+                            <constraint firstItem="9Ug-fL-EBQ" firstAttribute="top" secondItem="Aiz-u6-TWA" secondAttribute="bottom" constant="30" id="fPP-a7-mvv"/>
                             <constraint firstItem="6ta-GV-CP1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="fiI-QT-LFP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Aiz-u6-TWA" secondAttribute="trailing" constant="30" id="pXG-bF-b1c"/>
                         </constraints>

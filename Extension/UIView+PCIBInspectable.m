@@ -26,12 +26,47 @@
     return [UIColor colorWithCGColor:self.layer.borderColor];
 }
 
+- (void)setHexBorderColor:(NSString *)hexBorderColor {
+    UIColor *color = [self colorWithHexString:hexBorderColor];
+    [self.layer setBorderColor:[color CGColor]];
+}
+
+- (NSString *)hexBorderColor {
+    return @"0xFFFFFF";
+}
+
 - (void)setCornerRadius:(CGFloat)cornerRadius {
     [self.layer setCornerRadius:cornerRadius];
 }
 
 - (CGFloat)cornerRadius {
     return [self.layer cornerRadius];
+}
+
+- (void)setHexBgColor:(NSString *)hexStr {
+    UIColor *color = [self colorWithHexString:hexStr];
+    [self setBackgroundColor:color];
+}
+
+- (NSString *)hexBgColor {
+    return @"0xFFFFFF";
+}
+
+#pragma mark - Private
+
+- (UIColor *)colorWithHexString:(NSString *)hexStr {
+    if ([hexStr hasPrefix:@"#"]) {
+        hexStr = [hexStr stringByReplacingOccurrencesOfString:@"#" withString:@""];
+    }
+    NSScanner *scanner = [NSScanner scannerWithString:hexStr];
+    unsigned int hex;
+    if (![scanner scanHexInt:&hex]) {
+        return [UIColor whiteColor];
+    }
+    int r = (hex >> 16) & 0xFF;
+    int g = (hex >> 8) & 0xFF;
+    int b = hex & 0xFF;
+    return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0];
 }
 
 @end
