@@ -23,7 +23,7 @@
 /**
  根据十六进制颜色值设置边框颜色,如:0xFFFFFF、#FFFFFF
  */
-@property (nonatomic, assign) IBInspectable NSString *hexBorderColor;
+@property (nonatomic, assign) IBInspectable NSString *borderHexColor;
 
 /**
  设置圆角半径

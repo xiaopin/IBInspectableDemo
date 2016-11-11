@@ -26,12 +26,12 @@
     return [UIColor colorWithCGColor:self.layer.borderColor];
 }
 
-- (void)setHexBorderColor:(NSString *)hexBorderColor {
-    UIColor *color = [self colorWithHexString:hexBorderColor];
+- (void)setBorderHexColor:(NSString *)borderHexColor {
+    UIColor *color = [self colorWithHexString:borderHexColor];
     [self.layer setBorderColor:[color CGColor]];
 }
 
-- (NSString *)hexBorderColor {
+- (NSString *)borderHexColor {
     return @"0xFFFFFF";
 }
 

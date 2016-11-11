@@ -76,6 +76,7 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="hexBorderColor" value="0xFF6633"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="hexBgColor" value="#FF21ED"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderHexColor" value="0xCDABEF"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
